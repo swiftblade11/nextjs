@@ -18,7 +18,8 @@ export default function Home() {
         <meta property="og:title" content="Home | Land for smile title" />
         <meta
           property="og:description"
-          content="Land for smile og:description."
+          content="Land for smile | ทุกทำเลที่ใช่สำหรับคุณ
+          พวกเราคือตัวแทนขายทรัพย์ที่มีประสบการณ์มากกว่า 10 ปี"
         />
         <meta property="og:image" content="/opengraph.png" />
       </Head>
