@@ -4,9 +4,11 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { NextSeo } from "next-seo";
 
-const Product = () => {
+const Product = (props) => {
   const route = useRouter();
   const productId = route.query.productId;
+  console.log("props", props);
+  const { product } = props;
   return (
     <div className={styles.container}>
       {/* <Head>
@@ -29,12 +31,12 @@ const Product = () => {
       </Head> */}
       <NextSeo
         title="Using More of Config"
-        description={`This example uses more of the available config options. ${productId}`}
+        description={`This example uses more of the available config options. ${product.name}`}
         canonical="https://www.canonical.ie/"
         openGraph={{
           url: "https://www.url.ie/a",
-          title: `Open Graph Title ${productId}`,
-          description: `Open Graph Description ${productId}`,
+          title: `Open Graph Title ${product.name}`,
+          description: `Open Graph Description ${product.name}`,
           images: [
             {
               url: "/opengraph.png",
@@ -59,9 +61,27 @@ const Product = () => {
           cardType: "summary_large_image",
         }}
       />
-      <h1>Product | {productId}</h1>
+      <h1>Product | {product.name}</h1>
     </div>
   );
 };
 
+export async function getServerSideProps(context) {
+  const { query } = context;
+  console.log("context", context, query);
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  // const res = await fetch('https://.../posts')
+  // const posts = await res.json()
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      product: {
+        name: "abv",
+      },
+    },
+  };
+}
 export default Product;
