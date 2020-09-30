@@ -15,23 +15,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width" />
         <meta charSet="utf-8" />
         <title>Land for smile</title>
-        <meta name="twitter:site" content="@vercel" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:title" content="Land for smile" />
-        <meta property="og:url" content="https://nextjs.org" />
-        <meta name="description" content="Land for smile description." />
+        <meta property="og:title" content="Home | Land for smile title" />
         <meta
           property="og:description"
           content="Land for smile og:description."
         />
-        <meta
-          property="og:image"
-          content="https://nextjs.org/static/twitter-cards/home.jpg"
-        />
+        <meta property="og:image" content="/opengraph.png" />
       </Head>
 
       <main className={styles.main}>
-        <h1>Home Home Home</h1>
+        <h1>Home | Land for smile</h1>
       </main>
 
       <footer className={styles.footer}>
