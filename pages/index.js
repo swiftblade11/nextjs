@@ -14,18 +14,17 @@ export default function Home() {
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <meta name="viewport" content="width=device-width" />
         <meta charSet="utf-8" />
-        <title>Land for smile</title>
+        <title>Home | Land for smile</title>
         <meta property="og:title" content="Home | Land for smile title" />
         <meta
           property="og:description"
-          content="Land for smile | ทุกทำเลที่ใช่สำหรับคุณ
-          พวกเราคือตัวแทนขายทรัพย์ที่มีประสบการณ์มากกว่า 10 ปี"
+          content="Land for smile | ทุกทำเลที่ใช่สำหรับคุณ พวกเราคือตัวแทนขายทรัพย์ที่มีประสบการณ์มากกว่า 10 ปี"
         />
         <meta property="og:image" content="/opengraph.png" />
       </Head>
 
       <main className={styles.main}>
-        <h1>Home | Land for smile</h1>
+        <h1>Home | Land for smile 10 years</h1>
       </main>
 
       <footer className={styles.footer}>
